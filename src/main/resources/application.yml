@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: db-migration-batch
+  profiles:
+    active: local
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test
+      username: root
+      password: 1234567890
+  batch:
+    jdbc:
+      initialize-schema: always
